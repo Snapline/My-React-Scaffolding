@@ -1,0 +1,50 @@
+{
+    "compilerOptions": {
+      "sourceMap": true,
+      "strict": true,
+      "noEmit": false,
+      "skipLibCheck": true,
+      "module": "commonjs",
+      "target": "es6",
+      "lib": [
+        "es2015",
+        "es2017",
+        "dom"
+      ],
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "jsx": "react-jsx",
+      "allowJs": true,
+      "baseUrl": ".",
+      "paths": {
+        "@src/*": ["src/*"],
+        "@assets/*": ["src/assets/*"],
+        "@pages/*": ["src/pages/*"],
+        "@enum/*": ["src/enum/*"],
+        "@interfaces/*": ["src/interfaces/*"],
+        "@redux/*": ["src/redux/*"],
+        "@components/*": ["src/components/*"],
+        "@hooks/*": ["src/hooks/*"],
+      },
+      "typeRoots": [
+        "node_modules/@types",
+      ],
+      "types": ["node", "jest", "@testing-library/jest-dom"],
+      "resolveJsonModule": true,
+      "moduleResolution": "node",
+      "disableSizeLimit": true,
+      "experimentalDecorators": true,
+      "declaration": false,
+      "outDir": "./dist",
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.js",
+      "src/**/*.jsx"
+    ],
+    "exclude": [
+      "node_modules",
+      "**/*.test.ts",
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "prettier", "react", "unused-imports"],
+    "rules": {
+      "no-unused-vars": 0,
+      "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/no-unused-vars": 0,
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        { "args": "after-used", "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }
+      ],
+      "react-hooks/exhaustive-deps": 0,
+      "react/prop-types": 0,
+      "react/react-in-jsx-scope": 0,
+      "prettier/prettier": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".svg", ".ts", ".tsx"],
+          "paths": ["."]
+        }
+      },
+      "react": {
+        "version": "detect"
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jasmine": true
+    }
+}
